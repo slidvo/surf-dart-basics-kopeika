@@ -1,4 +1,4 @@
-import 'dart:ffi';
+import 'dart:collection';
 
 /**
  * Выполните задания:
@@ -19,7 +19,10 @@ void main() {
   numberBook["Екатерина"] = 2359942;
 
 //Отсортировать карту в обратном порядке по ключам и вывести на экран результат
-  numberBook = Map.fromEntries(numberBook.entries.toList()
-    ..sort((a, b) => a.key.compareTo(b.key) < 0 ? 1 : 0));
-  print(numberBook);
+  // numberBook = Map.fromEntries(numberBook.entries.toList()
+  //   ..sort((a, b) => b.key.compareTo(a.key)));
+  // print(numberBook);
+  final sorted = SplayTreeMap<String, dynamic>.from(
+      numberBook, (a, b) => b.compareTo(a));
+  print(sorted);
 }
