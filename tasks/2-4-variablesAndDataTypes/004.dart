@@ -7,7 +7,7 @@
 void main() {
   dynamic dyn = 42;
   var text = "Text example";
-  
+
   print("dyn type is : ${dyn.runtimeType}");
   // dyn type is : int
 

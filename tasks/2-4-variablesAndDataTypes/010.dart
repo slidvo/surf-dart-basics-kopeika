@@ -21,7 +21,7 @@ void main() {
   print("mySet length is ${mySet.length}");
   //mySet length is 3
   //Длина 3 потому что Set хранит только уникальные значения, а Вашингтон изначально присутствовал в mySet перед добавлением
-  String text = '''She sells sea shells on the sea shore
+  final String text = '''She sells sea shells on the sea shore
 
 The shells that she sells are sea shells I am sure.
 
@@ -30,12 +30,7 @@ So if she sells sea shells on the sea shore
 I am sure that the shells are sea shore shells
 ''';
 
-  var words = text
-      .replaceAll(".", "")
-      .replaceAll(RegExp('r(\n)'), ' ')
-      .toLowerCase()
-      .split(" ");
-  // print(words);
-  int uniqueWordsCount = Set.from(words).length;
-  print(uniqueWordsCount);
+  final uniqueWords = text.toLowerCase().split(RegExp(r'[ .\n]+')).toSet();
+  print(uniqueWords);
+  print('Количество слов ${uniqueWords.length}');
 }
