@@ -7,6 +7,6 @@ void main() {
   const con = 42;
 
 // final и const можно инициализировать только один раз
-  fin = 42;
-  con = 42;
+//   fin = 42;
+//   con = 42;
 }
