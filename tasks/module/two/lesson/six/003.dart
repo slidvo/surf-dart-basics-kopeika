@@ -1,10 +1,10 @@
 import 'dart:math';
 import 'package:collection/collection.dart';
 
-/**
- * Модернизируйте предыдущие функции так, чтобы на вход они принимали
- * необходимые данные для работы. Параметр должен быть опциональным.
- */
+// /**
+//  * Модернизируйте предыдущие функции так, чтобы на вход они принимали
+//  * необходимые данные для работы. Параметр должен быть опциональным.
+//  */
 
 
 void main() {
@@ -36,9 +36,9 @@ List<int> generateArrayOfNumbers() {
   return arrayOfNumbers;
 }
 
-/**
- * опциональный параметр
- */
+// /**
+//  * опциональный параметр
+//  */
 String reverseTextOrder({String text = "q qw qwe qwer qwert qwerty"}){
   var splitText = text.split(" ");
   splitText.sort((a, b) => b.compareTo(a));
