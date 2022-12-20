@@ -24,11 +24,9 @@ void main() async {
 }
 
 Future<String> readDataFromKeyboard() {
-  return Future(() {
-    return stdin
-        .readLineSync(encoding: Encoding.getByName("utf-8") ?? SystemEncoding())
-        .toString();
-  });
+  return Future(() => stdin
+      .readLineSync(encoding: Encoding.getByName("utf-8") ?? SystemEncoding())
+      .toString());
 }
 
 Future<String> getError() {
